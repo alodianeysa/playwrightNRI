@@ -1,0 +1,20 @@
+const {defineConfig} = require('@playwright/test');
+
+module.exports = defineConfig({
+    testDir: './tests',
+    use: {
+        browserName: 'chromium',
+        headless: false,
+        viewport: {width:1280, height:720},
+    },
+});
+
+const config = {
+    timeout: 60000,
+    reporter: [
+        ['list'],
+        ['html', { outputFolder: 'playwright-report', open: 'never' }]
+    ],
+    // pengaturan lain
+};
+module.exports = config;
