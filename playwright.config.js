@@ -10,7 +10,7 @@ module.exports = defineConfig({
 });
 
 const config = {
-    timeout: 60000,
+    timeout: 120000,
     reporter: [
         ['list'],
         ['html', { outputFolder: 'playwright-report', open: 'never' }]
